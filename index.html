@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Medio Digital</title>
+    <title>El Adagio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,13 +64,13 @@
             height: auto;
             border-radius: 5px;
         }
-        .news-section {
+        .news-section, .trending-section {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             margin: 20px 0;
         }
-        .news-card {
+        .news-card, .trending-card {
             background: white;
             padding: 15px;
             border-radius: 5px;
@@ -78,18 +78,18 @@
             width: 100%;
             text-align: center;
         }
-        .news-card img {
+        .news-card img, .trending-card img {
             width: 100%;
             height: auto;
             border-radius: 5px;
         }
         @media(min-width: 600px) {
-            .news-card {
+            .news-card, .trending-card {
                 width: 48%;
             }
         }
         @media(min-width: 900px) {
-            .news-card {
+            .news-card, .trending-card {
                 width: 31%;
             }
         }
@@ -138,6 +138,20 @@
         <div class="carousel">
             <img src="https://via.placeholder.com/800x250" alt="Noticia destacada">
         </div>
+        <h2>Tendencias</h2>
+        <section class="trending-section">
+            <div class="trending-card">
+                <img src="https://via.placeholder.com/300" alt="Tendencia 1">
+                <h2>Tendencia 1</h2>
+                <p>Resumen de la noticia en tendencia.</p>
+            </div>
+            <div class="trending-card">
+                <img src="https://via.placeholder.com/300" alt="Tendencia 2">
+                <h2>Tendencia 2</h2>
+                <p>Resumen de la noticia en tendencia.</p>
+            </div>
+        </section>
+        <h2>Últimas Noticias</h2>
         <section class="news-section">
             <div class="news-card">
                 <img src="https://via.placeholder.com/300" alt="Noticia 1">
@@ -161,4 +175,5 @@
     </footer>
 </body>
 </html>
+
 
