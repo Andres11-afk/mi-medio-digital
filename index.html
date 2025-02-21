@@ -12,11 +12,22 @@
             background-color: #f4f4f4;
         }
         header {
-            background: #333;
+            background: #6a0dad;
             color: white;
             padding: 15px;
             text-align: center;
             font-size: 24px;
+        }
+        nav {
+            background: #5a0cad;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
         }
         .container {
             width: 80%;
@@ -46,6 +57,12 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             width: 100%;
+            text-align: center;
+        }
+        .news-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
         @media(min-width: 600px) {
             .news-card {
@@ -56,6 +73,13 @@
             .news-card {
                 width: 31%;
             }
+        }
+        footer {
+            background: #4a0c8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
         }
     </style>
     <script>
@@ -80,24 +104,38 @@
     <header>
         Mi Medio Digital
     </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Política</a>
+        <a href="#">Economía</a>
+        <a href="#">Deportes</a>
+        <a href="#">Tecnología</a>
+    </nav>
     <div class="container">
         <div class="search-bar">
             <input type="text" id="searchInput" onkeyup="searchNews()" placeholder="Buscar noticias...">
         </div>
         <section class="news-section">
             <div class="news-card">
+                <img src="https://via.placeholder.com/300" alt="Noticia 1">
                 <h2>Noticia 1</h2>
                 <p>Descripción breve de la noticia.</p>
             </div>
             <div class="news-card">
+                <img src="https://via.placeholder.com/300" alt="Noticia 2">
                 <h2>Noticia 2</h2>
                 <p>Descripción breve de la noticia.</p>
             </div>
             <div class="news-card">
+                <img src="https://via.placeholder.com/300" alt="Noticia 3">
                 <h2>Noticia 3</h2>
                 <p>Descripción breve de la noticia.</p>
             </div>
         </section>
     </div>
+    <footer>
+        &copy; 2025 Mi Medio Digital | Todos los derechos reservados
+    </footer>
 </body>
 </html>
+
