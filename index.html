@@ -52,6 +52,18 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
         .news-section {
             display: flex;
             flex-wrap: wrap;
@@ -122,6 +134,9 @@
     <div class="container">
         <div class="search-bar">
             <input type="text" id="searchInput" onkeyup="searchNews()" placeholder="Buscar noticias...">
+        </div>
+        <div class="carousel">
+            <img src="https://via.placeholder.com/800x250" alt="Noticia destacada">
         </div>
         <section class="news-section">
             <div class="news-card">
