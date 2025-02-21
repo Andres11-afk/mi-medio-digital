@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Adagio</title>
+    <title>Mi Medio Digital</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,6 +35,7 @@
             margin: 0 15px;
             text-decoration: none;
             font-size: 18px;
+            cursor: pointer;
         }
         .container {
             width: 80%;
@@ -93,6 +94,10 @@
                 width: 31%;
             }
         }
+        .section-content {
+            display: none;
+            margin-top: 10px;
+        }
         footer {
             background: #4a0c8a;
             color: white;
@@ -117,19 +122,28 @@
                 }
             }
         }
+
+        function toggleSection(sectionId) {
+            let section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
     </script>
 </head>
 <body>
     <header>
-        <img src="imagenes/logotipo.png" alt="Logo de Mi Medio Digital">
+        <img src="logo.png" alt="Logo de Mi Medio Digital">
         <span>Mi Medio Digital</span>
     </header>
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Política</a>
-        <a href="#">Economía</a>
-        <a href="#">Deportes</a>
-        <a href="#">Tecnología</a>
+        <a href="#" onclick="toggleSection('inicio')">Inicio</a>
+        <a href="#" onclick="toggleSection('politica')">Política</a>
+        <a href="#" onclick="toggleSection('economia')">Economía</a>
+        <a href="#" onclick="toggleSection('deportes')">Deportes</a>
+        <a href="#" onclick="toggleSection('tecnologia')">Tecnología</a>
     </nav>
     <div class="container">
         <div class="search-bar">
@@ -138,42 +152,25 @@
         <div class="carousel">
             <img src="https://via.placeholder.com/800x250" alt="Noticia destacada">
         </div>
-        <h2>Tendencias</h2>
-        <section class="trending-section">
-            <div class="trending-card">
-                <img src="https://via.placeholder.com/300" alt="Tendencia 1">
-                <h2>Tendencia 1</h2>
-                <p>Resumen de la noticia en tendencia.</p>
-            </div>
-            <div class="trending-card">
-                <img src="https://via.placeholder.com/300" alt="Tendencia 2">
-                <h2>Tendencia 2</h2>
-                <p>Resumen de la noticia en tendencia.</p>
-            </div>
-        </section>
-        <h2>Últimas Noticias</h2>
-        <section class="news-section">
-            <div class="news-card">
-                <img src="https://via.placeholder.com/300" alt="Noticia 1">
-                <h2>Noticia 1</h2>
-                <p>Descripción breve de la noticia.</p>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/300" alt="Noticia 2">
-                <h2>Noticia 2</h2>
-                <p>Descripción breve de la noticia.</p>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/300" alt="Noticia 3">
-                <h2>Noticia 3</h2>
-                <p>Descripción breve de la noticia.</p>
-            </div>
-        </section>
+        <div id="deportes" class="section-content">
+            <h2>Deportes</h2>
+            <p>Aquí van las noticias deportivas.</p>
+        </div>
+        <div id="politica" class="section-content">
+            <h2>Política</h2>
+            <p>Aquí van las noticias de política.</p>
+        </div>
+        <div id="economia" class="section-content">
+            <h2>Economía</h2>
+            <p>Aquí van las noticias de economía.</p>
+        </div>
+        <div id="tecnologia" class="section-content">
+            <h2>Tecnología</h2>
+            <p>Aquí van las noticias de tecnología.</p>
+        </div>
     </div>
     <footer>
         &copy; 2025 Mi Medio Digital | Todos los derechos reservados
     </footer>
 </body>
 </html>
-
-
